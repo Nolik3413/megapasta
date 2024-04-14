@@ -45,24 +45,24 @@ local function GetIcon(IconName)
 	end
 end   
 
-local OS = Instance.new("ScreenGui")
-OS.Name = "OS"
+local Orion = Instance.new("ScreenGui")
+Orion.Name = "Orion"
 if syn then
-	syn.protect_gui(OS)
-	OS.Parent = game.CoreGui
+	syn.protect_gui(Orion)
+	Orion.Parent = game.CoreGui
 else
-	OS.Parent = gethui() or game.CoreGui
+	Orion.Parent = gethui() or game.CoreGui
 end
 
 if gethui then
 	for _, Interface in ipairs(gethui():GetChildren()) do
-		if Interface.Name == OS.Name and Interface ~= OS then
+		if Interface.Name == Orion.Name and Interface ~= Orion then
 			Interface:Destroy()
 		end
 	end
 else
 	for _, Interface in ipairs(game.CoreGui:GetChildren()) do
-		if Interface.Name == OS.Name and Interface ~= OS then
+		if Interface.Name == Orion.Name and Interface ~= Orion then
 			Interface:Destroy()
 		end
 	end
@@ -70,9 +70,9 @@ end
 
 function OrionLib:IsRunning()
 	if gethui then
-		return OS.Parent == gethui()
+		return Orion.Parent == gethui()
 	else
-		return OS.Parent == game:GetService("CoreGui")
+		return Orion.Parent == game:GetService("CoreGui")
 	end
 
 end
@@ -224,7 +224,7 @@ local function LoadCfg(Config)
 				end    
 			end)
 		else
-			warn("Orion Library Config Loader - Could not find ", a ,b)
+			warn("OS HUB Config Loader - Could not find ", a ,b)
 		end
 	end)
 end
