@@ -1,0 +1,443 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/Nolik3413/OS/main/pasta')))()
+
+local Window = OrionLib:MakeWindow({Name = "OS HUB", HidePremium = true, SaveConfig = true, ConfigFolder = "OrionTest"})
+--[[
+Name = <string> - The name of the UI.
+HidePremium = <bool> - Whether or not the user details shows Premium status or not.
+SaveConfig = <bool> - Toggles the config saving in the UI.
+ConfigFolder = <string> - The name of the folder where the configs are saved.
+IntroEnabled = <bool> - Whether or not to show the intro animation.
+IntroText = <string> - Text to show in the intro animation.
+IntroIcon = <string> - URL to the image you want to use in the intro animation.
+Icon = <string> - URL to the image you want displayed on the window.
+CloseCallback = <function> - Function to execute when the window is closed.
+]]
+
+local Tab = Window:MakeTab({
+    Name = "Betaversions",
+    Icon = "rbxassetid://7734058345",
+    PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+local Section = Tab:AddSection({
+    Name = "Бетки читов"
+})
+
+Tab:AddButton({
+    Name = "Фейк ключ карта",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17.2212296, 17.4652348, 99.5729904, 0.642762303, 0.766065598, -3.78489494e-06, -3.78489494e-06, 8.10623169e-06, 1, 0.766065598, -0.642762303, 8.10623169e-06)
+    wait(0.70)
+    fireproximityprompt(workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup.FakeKeycard.Handle.ProximityPrompt)
+    wait(0.10)
+    fireproximityprompt(workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup.FakeKeycard.Handle.ProximityPrompt)
+    wait(0.20)
+    fireproximityprompt(workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup.FakeKeycard.Handle.ProximityPrompt)
+    wait(0.30)
+    fireproximityprompt(workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup.FakeKeycard.Handle.ProximityPrompt)
+    end    
+})
+
+Tab:AddButton({
+    Name = "Фейк бан",
+    Callback = function()
+    game.Players.LocalPlayer:Kick("\nBanned from the place       Time = Inf")
+    end    
+})
+
+Tab:AddButton({
+    Name = "Сделать меню закупки невидимым",
+    Callback = function()
+    game:GetService("Players").LocalPlayer.PlayerGui.BuyMenu.Frame.TextLabel.Text = "2 СЕК"
+    wait(2)
+    game:GetService("Players").LocalPlayer.PlayerGui.BuyMenu.Enabled = false
+
+    game:GetService("Players").LocalPlayer.PlayerGui.BuyMenu.Frame.TextLabel.Text = "МЕНЮ ЗАКУПКИ"
+    end    
+})
+
+--[[
+Name = <string> - The name of the section.
+]]
+local Tab = Window:MakeTab({
+    Name = "Билдборды",
+    Icon = "rbxassetid://17169589191",
+    PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+local Section = Tab:AddSection({
+    Name = "Изменение рекламы ВИЗУАЛ!"
+})
+
+local Section = Tab:AddSection({
+    Name = "Изменение рекламы картинками также ВИЗУАЛ!"
+})
+
+Tab:AddTextbox({
+    Name = "Заголовок рекламы",
+    Default = "я потяну тебя за 🍆 и оторву",
+    TextDisappear = true,
+    Callback = function(txt)
+            workspace.AdBillboards.Billboard.Screen:GetChildren()[2].ContextFrame.TextLabel.Text = (txt)
+
+        workspace.AdBillboards.Billboard.Screen.Interface.ContextFrame.TextLabel.Text = (txt)
+
+        workspace.AdBillboards:GetChildren()[4].Screen:GetChildren()[2].ContextFrame.TextLabel.Text = (txt)
+
+        workspace.AdBillboards:GetChildren()[4].Screen.Interface.ContextFrame.TextLabel.Text = (txt)
+
+        workspace.AdBillboards.PlasmaTV.Screen:GetChildren()[2].ContextFrame.TextLabel.Text = (txt)
+
+        workspace.AdBillboards.PlasmaTV.Screen.Interface.ContextFrame.TextLabel.Text = (txt)
+
+        workspace.AdBillboards:GetChildren()[2].Screen:GetChildren()[2].ContextFrame.TextLabel.Text = (txt)
+
+        workspace.AdBillboards:GetChildren()[2].Screen.Interface.ContextFrame.TextLabel.Text = (txt)
+
+        workspace.AdBillboards:GetChildren()[3].Screen:GetChildren()[2].ContextFrame.TextLabel.Text = (txt)
+    end   
+})
+
+Tab:AddTextbox({
+    Name = "Контекст рекламы",
+    Default = "Главное Меллстроя вставить",
+    TextDisappear = true,
+    Callback = function(txt)
+    workspace.AdBillboards.Billboard.Screen:GetChildren()[2].ContextFrame:GetChildren()[2].Text = (txt)
+
+        workspace.AdBillboards.Billboard.Screen.Interface.ContextFrame:GetChildren()[2].Text = (txt)
+
+        workspace.AdBillboards:GetChildren()[4].Screen:GetChildren()[2].ContextFrame:GetChildren()[2].Text = (txt)
+
+        workspace.AdBillboards:GetChildren()[4].Screen.Interface.ContextFrame:GetChildren()[2].Text = (txt)
+
+        workspace.AdBillboards.PlasmaTV.Screen:GetChildren()[2].ContextFrame:GetChildren()[2].Text = (txt)
+
+        workspace.AdBillboards.PlasmaTV.Screen.Interface.ContextFrame:GetChildren()[2].Text = (txt)
+
+        workspace.AdBillboards:GetChildren()[2].Screen:GetChildren()[2].ContextFrame:GetChildren()[2].Text = (txt)
+
+       workspace.AdBillboards:GetChildren()[2].Screen.Interface.ContextFrame:GetChildren()[2].Text = (txt)
+
+       workspace.AdBillboards:GetChildren()[3].Screen:GetChildren()[2].ContextFrame:GetChildren()[2].Text = (txt)
+
+       workspace.AdBillboards:GetChildren()[2].Screen.Interface.ContextFrame:GetChildren()[2].Text = (txt)
+
+       workspace.AdBillboards:GetChildren()[2].Screen.Interface.ContextFrame.TextLabel.Text = (txt)
+    end   
+})
+
+Tab:AddTextbox({
+    Name = "Айди картинки для рекламы",
+    Default = "rbxthumb://type=Asset&id=айди&w=420&h=420",
+    TextDisappear = true,
+    Callback = function(txt)
+        workspace.AdBillboards.Billboard.Screen:GetChildren()[2].ContextFrame.ImageLabel.Image = (txt)
+
+        workspace.AdBillboards.Billboard.Screen.Interface.ContextFrame.ImageLabel.Image = (txt)
+
+        workspace.AdBillboards:GetChildren()[4].Screen:GetChildren()[2].ContextFrame.ImageLabel.Image = (txt)
+
+        workspace.AdBillboards:GetChildren()[4].Screen.Interface.ContextFrame.ImageLabel.Image = (txt)
+
+        workspace.AdBillboards.PlasmaTV.Screen:GetChildren()[2].ContextFrame.ImageLabel.Image = (txt)
+
+        workspace.AdBillboards.PlasmaTV.Screen.Interface.ContextFrame.ImageLabel.Image = (txt)
+
+        workspace.AdBillboards:GetChildren()[2].Screen:GetChildren()[2].ContextFrame.ImageLabel.Image = (txt)
+
+        workspace.AdBillboards:GetChildren()[2].Screen.Interface.ContextFrame.ImageLabel.Image = (txt)
+
+        workspace.AdBillboards:GetChildren()[3].Screen:GetChildren()[2].ImageLabel.Image = (txt)
+    end   
+})
+
+
+local Tab = Window:MakeTab({
+    Name = "Thash",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+    Name = "Чит подбирает лут с мусорок"
+})
+
+Tab:AddButton({
+    Name = "Thash 1",
+    Callback = function()
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup:GetChildren()[6].G.CFrame
+    wait(0.20)
+    fireproximityprompt(workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup:GetChildren()[6].G.ProximityPrompt)
+    end    
+})
+
+Tab:AddButton({
+    Name = "Thash 2",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup:GetChildren()[13].trashcan.CFrame
+    wait(0.20)
+    fireproximityprompt(workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup:GetChildren()[13].trashcan.ProximityPrompt)
+    end    
+})
+
+
+Tab:AddButton({
+    Name = "Thash 3",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup:GetChildren()[4].trashcan.CFrame
+    wait(0.20)
+    fireproximityprompt(workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup:GetChildren()[4].trashcan.ProximityPrompt)
+    end    
+})
+
+Tab:AddButton({
+    Name = "Thash 4",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup:GetChildren()[14].trashcan.CFrame
+    wait(0.20)
+    fireproximityprompt(workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup:GetChildren()[14].trashcan.ProximityPrompt)
+    end    
+})
+
+Tab:AddButton({
+    Name = "Thash 5",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup.trashcan.trashcan.CFrame
+    wait(0.20)
+    fireproximityprompt(workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup.trashcan.trashcan.ProximityPrompt)
+    end    
+})
+
+Tab:AddButton({
+    Name = "Thash 6(сдать мусор)",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["\208\180\209\131\209\128\208\186\208\176"].a1["\208\191\208\190\208\188\208\190\208\185\208\186\208\184"].trash1.CFrame
+    wait(0.20)
+    fireproximityprompt(workspace["\208\180\209\131\209\128\208\186\208\176"].a1["\208\191\208\190\208\188\208\190\208\185\208\186\208\184"].trash1.use)
+    end    
+})
+
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+local Tab = Window:MakeTab({
+    Name = "ClickDetector",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "Телефон",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup.trashcan.trashcan.CFrame
+    wait(0.20)
+    fireproximityprompt(workspace["\208\180\209\131\209\128\208\186\208\176"].a1.for_pickup.trashcan.trashcan.ProximityPrompt)
+    end    
+})
+
+Tab:AddButton({
+    Name = "Артефакт",
+    Callback = function()
+        workspace.S1ntaksic.HumanoidRootPart.CFrame = workspace["\208\144\209\128\209\130\208\181\209\132\208\176\208\186\209\130 \"\208\159\208\187\208\190\209\130\209\140\""].CFrame
+    wait(0.20)
+    fireclickdetector(workspace["\208\144\209\128\209\130\208\181\209\132\208\176\208\186\209\130 \"\208\159\208\187\208\190\209\130\209\140\""].ClickDetector)
+    end    
+})
+
+Tab:AddButton({
+    Name = "Магаз",
+    Callback = function()
+    game.Players.LocalPlayer.PlayerGui.BuyMenu.Enabled = true
+    end    
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]]
+
+local Tab = Window:MakeTab({
+    Name = "Promo",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]] 
+
+Tab:AddButton({
+    Name = "Thash 6(сдать мусор)",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["\208\180\209\131\209\128\208\186\208\176"].a1.ammostoiki:GetChildren()[8]:GetChildren()[4].CFrame
+    end    
+})
+
+Tab:AddButton({
+    Name = "Артефакт",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["\208\180\209\131\209\128\208\186\208\176"].a1.GunPartsStoiki:GetChildren()[5].CFrame
+    wait(0.20)
+    fireclickdetector(workspace["\208\180\209\131\209\128\208\186\208\176"].a1.GunPartsStoiki:GetChildren()[5].Useful)
+    end
+})
+
+Tab:AddButton({
+    Name = "Уничтожение дождливого эффекта",
+    Callback = function()
+while wait(10) do
+    game:GetService("Lighting").raincolorcorrection:Destroy()
+end
+    end    
+})
+
+Tab:AddButton({
+    Name = "Артефакт",
+    Callback = function()
+    fireclickdetector(workspace.NewLocation["\208\154\208\159\208\159"].Model.Neon.ClickDetector)
+    end
+})
+
+local Tab = Window:MakeTab({
+    Name = "Снабжельцы",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+    Name = "Для поставок запчастей"
+})
+
+Tab:AddButton({
+    Name = "Полка 1",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["\208\180\209\131\209\128\208\186\208\176"].a1.GunPartsStoiki:GetChildren()[5].CFrame
+    wait(0.20)
+    fireclickdetector(workspace["\208\180\209\131\209\128\208\186\208\176"].a1.GunPartsStoiki:GetChildren()[5].Useful)
+    end
+})
+
+Tab:AddButton({
+    Name = "Полка 2",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["\208\180\209\131\209\128\208\186\208\176"].a1.GunPartsStoiki:GetChildren()[3].CFrame
+    wait(0.20)
+    fireclickdetector(workspace["\208\180\209\131\209\128\208\186\208\176"].a1.GunPartsStoiki:GetChildren()[3].Useful)
+    end
+})
+
+Tab:AddButton({
+    Name = "Полка 3",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["\208\180\209\131\209\128\208\186\208\176"].a1.GunPartsStoiki.Shelf.CFrame
+    wait(0.20)
+    fireclickdetector(workspace["\208\180\209\131\209\128\208\186\208\176"].a1.GunPartsStoiki.Shelf.Useful)
+    end
+})
+
+Tab:AddButton({
+    Name = "Полка 4",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["\208\180\209\131\209\128\208\186\208\176"].a1.GunPartsStoiki:GetChildren()[4].CFrame
+    wait(0.20)
+    fireclickdetector(workspace["\208\180\209\131\209\128\208\186\208\176"].a1.GunPartsStoiki:GetChildren()[4].Useful)
+    end
+})
+
+local Section = Tab:AddSection({
+    Name = "Патроны кароче"
+})
+
+Tab:AddButton({
+    Name = "Сдача патрон",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["\208\180\209\131\209\128\208\186\208\176"].a1.ammostoiki:GetChildren()[8]:GetChildren()[4].CFrame
+    end
+})
+
+local Tab = Window:MakeTab({
+    Name = "Разное",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+Tab:AddButton({
+    Name = "Сдача патрон",
+    Callback = function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace["\208\180\209\131\209\128\208\186\208\176"].a1.ammostoiki:GetChildren()[8]:GetChildren()[4].CFrame
+    end
+})
+
+Tab:AddTextbox({
+    Name = "Взять наручниками игрока",
+    Default = "Ник игрока",
+    TextDisappear = true,
+    Callback = function(txt)
+        local player = game.Players:FindFirstChild(txt)
+        if player then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame
+            wait(0.20)
+            local Event = game:GetService("ReplicatedStorage").ArrestFunction
+            Event:InvokeServer(player)
+
+        else
+            print("Игрок с таким ником не найден.")
+        end
+    end
+})
+
+Tab:AddTextbox({
+    Name = "Убить игрока",
+    Default = "Ник игрока",
+    TextDisappear = true,
+    Callback = function(txt)
+        local player = game.Players:FindFirstChild(txt)
+        if player then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame
+            wait(0.20)
+            local Event = game:GetService("ReplicatedStorage").ArrestFunction
+            Event:InvokeServer(player)
+            wait(1)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.killpart.CFrame
+            wait(0.20)
+local A_1 = "\68\101\97\99\116\105\118\97\116\101"
+local Event = game:GetService("ReplicatedStorage").ArrestFunction
+Event:InvokeServer(A_1)
+
+        else
+            print("Игрок с таким ником не найден.")
+        end
+    end
+})
+
+--[[
+Name = <string> - The name of the textbox.
+Default = <string> - The default value of the textbox.
+TextDisappear = <bool> - Makes the text disappear in the textbox after losing focus.
+Callback = <function> - The function of the textbox.
+]]
